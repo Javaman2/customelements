@@ -27,7 +27,7 @@ showAsElement(message: string) {
     document.body.appendChild(popupEl);
   }
 ```
-[![Demo](https://share.gifyoutube.com/KzB6Gb.gif)](https://www.youtube.com/watch?v=ek1j272iAmc)
+![Demo](https://github.com/Javaman2/customelements/blob/master/src/assets/demo.gif)
 
 
 ## Development server
