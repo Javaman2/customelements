@@ -2,6 +2,33 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.7.
 
+We've been creating cutom components in Angular for a long time.  However, in HTM5 there is a [custom element](https://www.google.com/search?q=html+custom+elements) specification which is a bare-bones, closer to the metal construct.
+
+What is Angular bridge to get there?  It's (casting) the document.createElement value to a NGElement WithProperites.
+This allows us to inject a "native" custom element directly into the DOM as shown here.
+
+```typescript
+showAsElement(message: string) {
+    // Create element
+    const popupEl: NgElement &
+      WithProperties<PopupComponent> = document.createElement(
+      "popup-element"
+    ) as any;
+
+    // Listen to the close event
+    popupEl.addEventListener("closed", () =>
+      document.body.removeChild(popupEl)
+    );
+
+    // Set the message
+    popupEl.message = message;
+
+    // Add to the DOM
+    document.body.appendChild(popupEl);
+  }
+```
+
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
