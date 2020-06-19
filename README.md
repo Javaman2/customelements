@@ -29,6 +29,7 @@ showAsElement(message: string) {
 ```
 ![Demo](https://github.com/Javaman2/customelements/blob/master/src/assets/demo.gif)
 
+[Dev.to Article](https://dev.to/jwp/angular-components-vs-web-components-in-10-minutes-pc4)
 
 ## Development server
 
